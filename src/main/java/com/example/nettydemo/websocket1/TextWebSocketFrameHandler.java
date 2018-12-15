@@ -11,7 +11,7 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
     
     //读到客户端的内容并且向客户端去写内容
     @Override
-    protected void messageReceived(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
         System.out.println("收到消息："+msg.text());
         
         /**
@@ -38,4 +38,5 @@ public class TextWebSocketFrameHandler extends SimpleChannelInboundHandler<TextW
         System.out.println("异常发生");
         ctx.close();
     }
+    
 }
