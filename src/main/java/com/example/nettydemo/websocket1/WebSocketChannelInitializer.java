@@ -1,6 +1,5 @@
-package com.example.nettydemo.demo1;
+package com.example.nettydemo.websocket1;
 
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
