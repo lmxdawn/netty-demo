@@ -13,7 +13,10 @@ import java.net.InetSocketAddress;
 //websocket长连接示例
 public class MyServer {
     public static void main(String[] args) throws Exception{
+        
+        // 主线程组
         EventLoopGroup bossGroup = new NioEventLoopGroup();
+        // 从线程组
         EventLoopGroup wokerGroup = new NioEventLoopGroup();
         
         try{
