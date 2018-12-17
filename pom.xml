@@ -30,6 +30,14 @@
             <version>4.1.25.Final</version>
         </dependency>
 
+        <!--高性能的内部队列-->
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
