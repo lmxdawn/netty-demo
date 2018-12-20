@@ -1,0 +1,22 @@
+syntax ="proto2";
+
+package com.example.nettydemo.protobuf;
+
+//optimize_for 加快解析的速度
+option optimize_for = SPEED;
+option java_package = "com.example.nettydemo.protobuf";
+option java_outer_classname="MessageData";
+
+// 客户端发送过来的消息实体
+message RequestUser{
+    optional string user_name = 1;
+    optional int32 age = 2;
+    optional string password = 3;
+}
+
+// 返回给客户端的消息实体
+message ResponseUser{
+    optional string user_name = 1;
+    optional int32 age = 2;
+    optional string password = 3;
+}

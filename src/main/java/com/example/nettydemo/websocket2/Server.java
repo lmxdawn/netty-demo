@@ -1,4 +1,4 @@
-package com.example.nettydemo.websocket1;
+package com.example.nettydemo.websocket2;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -11,7 +11,7 @@ import io.netty.handler.logging.LoggingHandler;
 import java.net.InetSocketAddress;
 
 //websocket长连接示例
-public class MyServer {
+public class Server {
     public static void main(String[] args) throws Exception{
         
         // 主线程组
@@ -24,7 +24,7 @@ public class MyServer {
             serverBootstrap.group(bossGroup,wokerGroup)
                     .channel(NioServerSocketChannel.class)
                     .handler(new LoggingHandler(LogLevel.INFO))
-                    .childHandler(new WebSocketChannelInitializer());
+                    .childHandler(new ServerChannelInitializer());
             
             ChannelFuture channelFuture = serverBootstrap.bind(new InetSocketAddress(8899)).sync();
             channelFuture.channel().closeFuture().sync();
